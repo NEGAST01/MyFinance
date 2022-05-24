@@ -1,0 +1,25 @@
+﻿@model ContaModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<h3>Criar Conta</h3>
+
+<form asp-controller = "Conta" asp-action = "CriarConta">
+    
+    <div class="form-group">
+        <label>Nome:</label>
+        <input type="text" class="form-control" asp-for="Nome">
+        <span asp-validation-for ="Nome" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Saldo:</label>
+        <input type="text" class="form-control" asp-for="Saldo">
+        <span asp-validation-for ="Saldo" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-block btn-success">Criar</button>
+</form>
